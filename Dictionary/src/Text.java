@@ -56,16 +56,15 @@ public class Text implements Translatable{
 	public int translate(Dictionary d){
 		int count = 0;
 		Node actual = begin;
-		if (actual != null){
-			while (actual != null){
-				try {
-					count += actual.getWord().translate(d);
-				} catch (NoWordFoundException e) {
-					System.out.println("Warning: " + actual.getWord() + " no esta en el diccionario");
-				}
-				actual = actual.getNext();
+		while (actual != null){
+			try {
+				count += actual.getWord().translate(d);
+			} catch (NoWordFoundException e) {
+				System.out.println("Warning: " + actual.getWord() + " no esta en el diccionario");
 			}
+			actual = actual.getNext();
 		}
+		
 		return count;
 	}
 

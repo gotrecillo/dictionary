@@ -1,4 +1,3 @@
-
 public class Word implements Comparable<Word>, Translatable {
 	private String word;
 

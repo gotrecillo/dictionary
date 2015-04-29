@@ -1,3 +1,5 @@
+import java.util.Iterator;
+import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -26,5 +28,17 @@ public class Dictionary {
 			return true;
 		}
 		return false;
+	}
+	
+	public String toString(){
+		String s = "";
+		Set<Word> keys = dictionary.keySet();
+		Iterator<Word> iteKeys = keys.iterator();
+		while (iteKeys.hasNext()) {
+			Word key = iteKeys.next();
+			Word value = dictionary.get(key);
+			s += key +" : " + value +" \n";
+		}
+		return s;
 	}
 }
