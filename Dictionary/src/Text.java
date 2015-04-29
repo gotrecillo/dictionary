@@ -2,13 +2,6 @@
 public class Text implements Translatable{
 	private Node begin;
 	
-	public Text(String text) {
-		String[] words = text.split(" ");
-		for (int i = 0; i < words.length; i++) {
-			add(new Word(words[i]));
-		}
-	}
-
 	public Text() {
 	}
 
