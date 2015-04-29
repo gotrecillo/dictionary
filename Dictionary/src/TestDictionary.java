@@ -14,10 +14,12 @@ public class TestDictionary {
 		t2.add(ai3);
 		t2.add(a3);
 		t2.add(a3);
+		t2.add(a4);
 		
 		Book b = new Book();
 		b.add(a3);
 		b.add(a2);
+		b.add(t2);
 		
 		System.out.println("Libro \n" + b + "\n");
 		
@@ -27,6 +29,8 @@ public class TestDictionary {
 		d.put(a3, ai3);
 
 	
+		t2.translate(d);
+		
 		System.out.println("Diccionario \n" + d + "\n");
 		
 		System.out.println("Traducimos");
